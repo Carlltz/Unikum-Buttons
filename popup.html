@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/styles.css" rel="stylesheet" />
+    <title>Add Button Popup</title>
+    <script language="javascript" src="lz-string.js"></script>
+    <script language="javascript" src="chrome-Storage-largeSync.js"></script>
+    <script src="popup.js"></script>
+  </head>
+  <body class="popupBody textColor">
+    <input list="group" name="selGroup" placeholder="Select a group" id="headerVal" />
+    <datalist id="group">
+      <option value="placeholder"></option>
+    </datalist>
+
+    <textarea
+      id="pageName"
+      placeholder="Ge sidan ett namn..."
+      name="pageName"
+      rows="2"
+      cols="40"
+      class="rounded border-black font-sans text-lg"
+    ></textarea>
+    <div style="display: flex; flex-direction: row; width: 100%; justify-content: space-between">
+      <button id="openSettings" class="blueButton mainButton textColor">Inställningar</button>
+      <button id="savePage" class="blueButton mainButton textColor">Spara sida</button>
+    </div>
+  </body>
+</html>

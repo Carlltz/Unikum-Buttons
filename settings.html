@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="/jquery-3.6.0.js"></script>
+    <script src="/jquery-ui.js"></script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/styles.css" rel="stylesheet" />
+    <title>Button Settings</title>
+    <script language="javascript" src="lz-string.js"></script>
+    <script language="javascript" src="chrome-Storage-largeSync.js"></script>
+    <script src="settings.js"></script>
+
+    <style>
+      .canvas {
+        display: flex;
+        column-gap: 6px;
+      }
+    </style>
+  </head>
+  <body class="textColor siteBody">
+    <h1>Unikum Buttons Inställningar</h1>
+    <div id="knappBox" class="defaultBoxColorNoBlur buttonBox buttonListDiv">
+      <p id="knappAction">Drag i en knapp för att flytta den:</p>
+      <div id="canvas" class="whiteBoxColor buttonBox"></div>
+      <div style="display: flex; flex-direction: row; align-items: center">
+        <p style="margin-right: 1rem">Växla läge (Flytta/Radera):</p>
+        <button id="dragDelToggle" class="blueButton mainButton textColor">Flytta</button>
+      </div>
+    </div>
+
+    <div class="textColor inline-block justify-center defaultBoxColor buttonBox">
+      <div class="flex-row flex items-center justify-between">
+        <p class="mb-015 mt-015 inline-block">Ändra färgen på knapparna:</p>
+        <input type="color" class="" id="btnColor" />
+      </div>
+      <div class="flex-row flex items-center justify-between">
+        <p class="mb-015 mt-015 mr-4 inline-block">Ändra färgen på knapparnas text:</p>
+        <input type="color" class="" id="txtColor" />
+      </div>
+      <div class="flex justify-evenly" style="margin-top: 0.5rem">
+        <button id="reset" class="blueButton mainButton textColor">Standard</button>
+        <button id="saveColor" class="blueButton mainButton textColor">Spara färger</button>
+      </div>
+    </div>
+  </body>
+</html>
+
+<!-- <button
+  id="saveColor"
+  class="bg-blue-500 hover:bg-blue-400 text-white font-semibold px-2 border-b-4 border-blue-400 hover:border-blue-300 rounded font-sans text-xl"
+>
+  Spara färger
+</button>
+<button
+  id="reset"
+  class="bg-red-500 hover:bg-red-400 text-white font-semibold px-2 border-b-4 border-red-400 hover:border-red-300 rounded font-sans text-xl"
+>
+  Reset
+</button> -->

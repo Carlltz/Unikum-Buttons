@@ -1,0 +1,297 @@
+.siteBody {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(44, 44, 44);
+  /* background-image: url(BlurryBackground.webp); */
+  -webkit-background-size: stretch;
+  -moz-background-size: stretch;
+  -o-background-size: stretch;
+  background-size: stretch;
+  margin: 0px;
+  row-gap: 1rem;
+  padding: 1rem;
+}
+
+.popupBody {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(44, 44, 44);
+  /* background-image: url(BlurryBackground.webp); */
+  -webkit-background-size: stretch;
+  -moz-background-size: stretch;
+  -o-background-size: stretch;
+  background-size: stretch;
+  margin: 0px;
+  row-gap: 0.3rem;
+  padding: 0.5rem;
+}
+
+h1 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.4rem;
+  text-decoration: underline;
+}
+
+p {
+  margin: 0px;
+}
+
+.buttonListDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 0.5rem;
+}
+
+.blueButton {
+  --mainBackgroundColor: rgba(30, 143, 255, 0.7);
+  --mainBorderColor: dodgerblue;
+  --activeButton: rgba(30, 143, 255, 1);
+}
+
+.redButton {
+  --mainBackgroundColor: rgba(255, 85, 85, 0.8);
+  --mainBorderColor: rgba(255, 85, 85, 0.9);
+  --activeButton: rgba(255, 85, 85, 1);
+}
+
+.defaultBoxColor {
+  --buttonBoxColor: rgba(65, 129, 192, 0.5);
+  --blur: blur(4px);
+}
+
+.defaultBoxColorNoBlur {
+  --buttonBoxColor: rgba(65, 129, 192, 0.5);
+  --blur: 0;
+}
+
+.whiteBoxColor {
+  --buttonBoxColor: rgba(255, 255, 255, 0.5);
+  --blur: 0;
+}
+
+.redBoxColor {
+  --buttonBoxColor: rgba(255, 85, 85, 0.5);
+  --blur: 0;
+}
+
+.buttonBox {
+  background: var(--buttonBoxColor);
+  backdrop-filter: var(--blur);
+  border-radius: 10px;
+  padding: 0.8rem 1rem 0.8rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border: 1px solid rgba(255, 255, 255, 0.1); */
+}
+
+.mainButton {
+  background-color: var(--mainBackgroundColor);
+  border: 2px solid var(--mainBorderColor);
+  backdrop-filter: blur(5px);
+  border-radius: 10px;
+  transition: border-radius 200ms ease-in-out;
+  padding: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.mainButton:hover {
+  border-radius: 5px;
+}
+.mainButton:active {
+  background-color: var(--activeButton);
+}
+
+.textColor {
+  color: white;
+  font-size: 1.5rem;
+  line-height: 1.75rem /* 28px */;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+    "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-weight: 600;
+}
+
+#canvass > div {
+  float: left;
+}
+
+.ml-2 {
+  margin-left: 0.5rem;
+}
+.mb-015 {
+  margin-bottom: 0.15rem;
+}
+
+.mt-015 {
+  margin-top: 0.15rem;
+}
+
+.font-sans {
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+    "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.text-xl {
+  font-size: 1.25rem /* 20px */;
+  line-height: 1.75rem /* 28px */;
+}
+
+.mt-2 {
+  margin-top: 0.5rem /* 8px */;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.border-2 {
+  border-width: 2px;
+}
+
+.rounded-lg {
+  border-radius: 0.5rem /* 8px */;
+}
+
+.border-solid {
+  border-style: solid;
+}
+
+.border-black {
+  --tw-border-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity));
+}
+
+.py-0\.5 {
+  padding-top: 0.125rem /* 2px */;
+  padding-bottom: 0.125rem /* 2px */;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.px-1 {
+  padding-left: 0.25rem /* 4px */;
+  padding-right: 0.25rem /* 4px */;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex {
+  display: flex;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-evenly {
+  justify-content: space-evenly;
+}
+
+.bg-blue-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(59 130 246 / var(--tw-bg-opacity));
+}
+
+.bg-red-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(239 68 68 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-red-400:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(248 113 113 / var(--tw-bg-opacity));
+}
+
+.hover\:border-red-300:hover {
+  --tw-border-opacity: 1;
+  border-color: rgb(252 165 165 / var(--tw-border-opacity));
+}
+
+.hover\:bg-blue-400:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(96 165 250 / var(--tw-bg-opacity));
+}
+
+.border-red-400 {
+  --tw-border-opacity: 1;
+  border-color: rgb(248 113 113 / var(--tw-border-opacity));
+}
+
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.px-2 {
+  padding-left: 0.5rem /* 8px */;
+  padding-right: 0.5rem /* 8px */;
+}
+
+.border-b-4 {
+  border-bottom-width: 4px;
+}
+
+.border-blue-400 {
+  --tw-border-opacity: 1;
+  border-color: rgb(96 165 250 / var(--tw-border-opacity));
+}
+
+.hover\:border-blue-300:hover {
+  --tw-border-opacity: 1;
+  border-color: rgb(147 197 253 / var(--tw-border-opacity));
+}
+
+.text-xl {
+  font-size: 1.25rem /* 20px */;
+  line-height: 1.75rem /* 28px */;
+}
+
+.rounded {
+  border-radius: 0.25rem /* 4px */;
+}
+
+.mr-4 {
+  margin-right: 1rem;
+}
+
+.mt-0 {
+  margin-top: 0px;
+}
+
+textarea {
+  flex: 2;
+}
+.topButton {
+  flex: 1.6;
+}
+.botButton {
+  display: block;
+  width: 100%;
+}
+
+.border-black {
+  --tw-border-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity));
+}
+
+.text-lg {
+  font-size: 1.125rem /* 18px */;
+  line-height: 1.75rem /* 28px */;
+}
