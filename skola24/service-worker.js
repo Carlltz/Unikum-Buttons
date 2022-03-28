@@ -1,7 +1,10 @@
+//import moment from "../skola24/moment.js";
 class api24 {
-  static {
-    importScripts("./moment.js");
-  }
+  /* static {
+    if ("function" === typeof importScripts) {
+      importScripts("moment.js");
+    }
+  } */
   static #Xscope;
   static async #fetchInclude(...args) {
     return await fetch(args[0], {
@@ -58,7 +61,7 @@ class api24 {
       parseInt(day.isoWeek() < 10 ? "0" + day.isoWeek() : day.isoWeek().toString()),
     ];
   }
-  static async getCurrentLessons24(skola = "DU/KTC", search = "na19") {
+  static async getCurrentLessons24({ skola = "DU/KTC", id = "na19", current = true } = {}) {
     const skola24 = await this.#fetchInclude(
       "https://web.skola24.se/timetable/timetable-viewer/katrineholm.skola24.se/DU/KTC/"
     );
@@ -77,7 +80,7 @@ class api24 {
           width: 1223,
           height: 550,
           selectionType: 4,
-          selection: await this.#getSelection24(search),
+          selection: await this.#getSelection24(id),
           showHeader: false,
           periodText: "",
           week,
@@ -90,15 +93,19 @@ class api24 {
       })
     ).json();
     let currentLessons = [];
-    for (const lesson of lessons.data.lessonInfo) {
-      if (
-        lesson.dayOfWeekNumber == moment().isoWeekday() &&
-        moment().isBetween(moment(lesson.timeStart, "hh:mm:ss"), moment(lesson.timeEnd, "hh:mm:ss"))
-      ) {
-        currentLessons.push(lesson.texts);
+    if (current) {
+      for (const lesson of lessons.data.lessonInfo) {
+        if (
+          lesson.dayOfWeekNumber == moment().isoWeekday() &&
+          moment().isBetween(moment(lesson.timeStart, "hh:mm:ss"), moment(lesson.timeEnd, "hh:mm:ss"))
+        ) {
+          currentLessons.push(lesson.texts);
+        }
       }
+      return currentLessons;
     }
-    return currentLessons;
+    return lessons.data.lessonInfo;
   }
 }
-api24.getCurrentLessons24().then(console.log);
+//api24.getCurrentLessons24().then(console.log);
+export default api24;

@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <script src="/jquery-3.6.0.js"></script>
-    <script src="/jquery-ui.js"></script>
+    <script src="libraries/jquery-3.6.0.js"></script>
+    <script src="libraries/jquery-ui.js"></script>
+    <script src="skola24/moment.js"></script>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,7 +11,7 @@
     <title>Button Settings</title>
     <script language="javascript" src="libraries/lz-string.js"></script>
     <script language="javascript" src="libraries/chrome-Storage-largeSync.js"></script>
-    <script src="settings.js"></script>
+    <script type="module" src="settings.js"></script>
 
     <style>
       .canvas {
@@ -21,6 +22,8 @@
   </head>
   <body class="textColor siteBody">
     <h1>Unikum Buttons Inställningar</h1>
+    <button id="btnTestAll">Fetch lessons skola24</button>
+    <button id="btnTest">Fetch current lesson skola24</button>
     <div id="knappBox" class="defaultBoxColorNoBlur buttonBox buttonListDiv">
       <p id="knappAction">Drag i en knapp för att flytta den:</p>
       <div id="canvas" class="whiteBoxColor buttonBox"></div>

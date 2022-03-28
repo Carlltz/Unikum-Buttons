@@ -1,4 +1,5 @@
 let style = document.createElement("style");
+import api24 from "/skola24/service-worker.js";
 //chrome.storage.sync.set({ c: ["100, 100, 100", "#ffffff"] });
 chrome.storage.sync.get("c", function (data) {
   let btnColor;
@@ -92,6 +93,12 @@ window.addEventListener("DOMContentLoaded", (event) => {
   document.getElementById("reset").addEventListener("click", function () {
     chrome.storage.sync.set({ c: ["10, 104, 244", "#ffffff"] });
     window.location.reload();
+  });
+  document.getElementById("btnTest").addEventListener("click", function () {
+    api24.getCurrentLessons24().then(console.log);
+  });
+  document.getElementById("btnTestAll").addEventListener("click", function () {
+    api24.getCurrentLessons24({ current: false }).then(console.log);
   });
 });
 

@@ -14,10 +14,3 @@ let links = [
     ],
   },
 ];
-
-function a() {
-  chrome.storage.largeSync.set({ b: links });
-  console.log("hej");
-}
-
-export { a };

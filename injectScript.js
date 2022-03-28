@@ -1,6 +1,6 @@
 //chrome.storage.largeSync.clear();
 
-let links = [
+/* let links = [
   {
     header: "Unikum start",
     btns: [
@@ -15,9 +15,13 @@ let links = [
       ["Unikum back1", "https://start.unikum.net/unikum/start.html?__pid=7183095743"],
     ],
   },
+  {
+    header: "Engelska",
+    btns: [["Planering", "https://start.unikum.net/unikum/start.html?__pid=7183095743"]],
+  },
 ];
 
-chrome.storage.largeSync.set({ b: links });
+chrome.storage.largeSync.set({ b: links }); */
 
 let stylei = document.createElement("style");
 chrome.storage.sync.get("c", function (data) {
