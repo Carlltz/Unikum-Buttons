@@ -17,6 +17,6 @@
     {
       "run_at": "document_end",
       "matches": ["https://start.unikum.net/*"],
-      "js": ["chrome-Storage-largeSync.js", "lz-string.js", "index.js"]
+      "js": ["libraries/chrome-Storage-largeSync.js", "libraries/lz-string.js", "index.js"]
     }]
 }
