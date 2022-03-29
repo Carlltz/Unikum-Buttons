@@ -99,7 +99,7 @@ class api24 {
           lesson.dayOfWeekNumber == moment().isoWeekday() &&
           moment().isBetween(moment(lesson.timeStart, "hh:mm:ss"), moment(lesson.timeEnd, "hh:mm:ss"))
         ) {
-          currentLessons.push(lesson.texts);
+          currentLessons.push(lesson);
         }
       }
       return currentLessons;
@@ -107,5 +107,5 @@ class api24 {
     return lessons.data.lessonInfo;
   }
 }
-api24.getCurrentLessons24().then(console.log);
-//export default api24;
+//api24.getCurrentLessons24().then(console.log);
+export default api24;

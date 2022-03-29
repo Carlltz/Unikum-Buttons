@@ -17,6 +17,6 @@
     {
       "run_at": "document_end",
       "matches": ["https://start.unikum.net/*"],
-      "js": ["libraries/chrome-Storage-largeSync.js", "libraries/lz-string.js", "injectScript.js"]
+      "js": ["buttonDesign.js", "libraries/chrome-Storage-largeSync.js", "libraries/lz-string.js", "injectScript.js"]
     }]
 }
