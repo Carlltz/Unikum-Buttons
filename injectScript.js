@@ -35,6 +35,9 @@ chrome.storage.sync.get("c", function (data) {
 });
 let refi = document.querySelector("script");
 //chrome.storage.largeSync.set({ b: buttons });
+document.addEventListener("DOMContentLoaded", () => {
+  console.log("Hej");
+});
 chrome.storage.largeSync.get("b", function (data) {
   refi.parentNode.insertBefore(stylei, refi);
   if (data.b != null) {

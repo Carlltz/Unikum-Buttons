@@ -1,0 +1,1 @@
+[...(new DOMParser()).parseFromString((await (await fetch(document.querySelector('a[title=Planering]').href)).text()),'text/html').querySelectorAll('tbody tr td a')].map(el => [el.innerText.match(/([^\s\\].+?(?=\n))/g),el.href])
